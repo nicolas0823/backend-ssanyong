@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2022 a las 19:10:54
+-- Tiempo de generación: 11-06-2022 a las 21:54:22
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.4.13
 
@@ -55,15 +55,9 @@ CREATE TABLE `cliente` (
   `cli_nombre_completo` varchar(255) NOT NULL,
   `cli_celular` varchar(10) NOT NULL,
   `cli_correo` varchar(255) NOT NULL,
-  `ciu_id` int(11) NOT NULL
+  `ciu_id` int(11) NOT NULL,
+  `dia_cotizacion` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `cliente`
---
-
-INSERT INTO `cliente` (`cli_id`, `cli_nombre_completo`, `cli_celular`, `cli_correo`, `ciu_id`) VALUES
-(1, 'Nicolas Riascos', '316270616', 'nicolas23fajardo@gmail.com', 4);
 
 -- --------------------------------------------------------
 
@@ -117,7 +111,7 @@ ALTER TABLE `departamento`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cli_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- Restricciones para tablas volcadas
